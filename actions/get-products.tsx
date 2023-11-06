@@ -20,9 +20,9 @@ const getProducts = async (query: Query): Promise<Product[]> => {
         }
     })
 
-    const res = await axios.get(url)
+    const res = await fetch(url)
 
-    return res.data
+    return res.json()
 }
 
 export default getProducts;
